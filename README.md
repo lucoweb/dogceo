@@ -89,4 +89,4 @@ Import the DB with:
 
 Export the DB with:
 
-    ddev export-db
+    ddev export-db -f dogceo.sql.gz
