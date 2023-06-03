@@ -83,8 +83,10 @@ Then run:
     cd ~/projects/dogceo/web/themes/custom/dogceo_theme/ && gulp
 
 ### Database
-Import the DB with:  
+Import the DB with:
+
     ddev import-db --src=dogceo.sql.gz
 
 Export the DB with:
+
     ddev export-db
