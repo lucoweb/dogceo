@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 55dfef29-4451-42ee-993f-b35c3e4bbba9
+name: 'Dog CEO'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /dog-breeds
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

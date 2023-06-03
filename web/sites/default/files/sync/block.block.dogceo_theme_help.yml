@@ -1,0 +1,22 @@
+uuid: d0ab5f6a-031d-43f3-8c9e-f76b0c92f7a5
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - dogceo_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: dogceo_theme_help
+theme: dogceo_theme
+region: top_header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,8 @@
+dogceo.settings:
+  type: form
+  label: 'DogCEO Settings'
+  mapping:
+    slug:
+      type: text
+      label: 'Default Dog Breed'
+      description: 'Enter the dog breed for the Dog Breed Block.'

@@ -1,0 +1,17 @@
+uuid: 60b6f7c4-0b69-498e-a870-41c168fd1c28
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Dog Breed'
+type: dog_breed
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
