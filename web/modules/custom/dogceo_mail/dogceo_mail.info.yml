@@ -1,0 +1,7 @@
+name: 'Dog CEO Mail'
+type: module
+description: 'Redirect all mail to a custom address'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Dog CEO'
+version: 1.0
+configure: dogceo_mail.config

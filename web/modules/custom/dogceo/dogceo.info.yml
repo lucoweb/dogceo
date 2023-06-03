@@ -1,0 +1,7 @@
+name: 'Dog CEO'
+type: module
+description: 'Fetches dog images from the Dog CEO API.'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Dog CEO'
+version: 1.0
+configure: dogceo.config

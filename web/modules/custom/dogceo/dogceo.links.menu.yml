@@ -1,0 +1,5 @@
+# Define default links for this module.
+dogceo.config:
+  title: Dog CEO Settings
+  description: Settings for the Dog Block Breed.
+  route_name: dogceo.config

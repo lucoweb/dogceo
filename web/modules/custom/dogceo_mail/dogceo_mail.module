@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dogceo_mail\Controller\MailDogController;
+
+/**
+ * Implements hook_mail_alter().
+ */
+function dogceo_mail_mail_alter(&$message) {
+  $mail_dog = new MailDogController();
+  $email = $mail_dog->fetchDogMail();
+
+  $message['headers']['Return-Path'] = $email;
+  $message['headers']['Sender'] = $email;
+  $message['headers']['From'] = $email;
+  $message['headers']['Reply-to'] = $email;
+}
+
+/**
+ * Implements hook_help().
+ */
+function dogceo_mail_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.dogceo':
+      return '<p>' . t('Help text for the Dog CEO module.') . '</p>';
+  }
+}

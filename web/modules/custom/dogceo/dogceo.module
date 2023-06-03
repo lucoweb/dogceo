@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dogceo\Controller\FetchDogController;
+
+/**
+ * Implements hook_entity_view().
+ */
+function dogceo_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityTypeId() === 'node' && $entity->getType() === 'dog_breed') {
+    $slug = $entity->get('field_slug')->value;
+    $fetch_dog = new FetchDogController;
+    $image_url = $fetch_dog->fetchDogImage($slug);
+
+    if ($image_url) {
+      // Build the image element with the generated URL.
+      $build['dog_ceo'] = [
+        '#theme' => 'imagecache_external',
+        '#uri' => $image_url,
+        '#style_name' => 'large',
+        '#alt' => 'Dog CEO random image',
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function dogceo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.dogceo':
+      return '<p>' . t('Help text for the Dog CEO module.') . '</p>';
+  }
+}

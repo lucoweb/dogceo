@@ -1,0 +1,7 @@
+dogceo.config:
+  path: '/admin/config/dogceo'
+  defaults:
+    _form: 'Drupal\dogceo\Form\DogCEOSettingsForm'
+    _title: 'Dog CEO Settings'
+  requirements:
+    _permission: 'administer site configuration'

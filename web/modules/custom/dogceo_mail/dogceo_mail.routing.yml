@@ -1,0 +1,7 @@
+dogceo_mail.config:
+  path: '/admin/config/dogceo_mail'
+  defaults:
+    _form: 'Drupal\dogceo_mail\Form\DogCEOMailSettingsForm'
+    _title: 'Dog CEO Mail Settings'
+  requirements:
+    _permission: 'administer site configuration'
