@@ -12,6 +12,8 @@ In order to ensure maximum compatibility, please use:
 3. Ubuntu for Windows (can be obtained for free from the Windows App Store)
 4. DDEV (Lando should work as well. *YMMV*)
 
+***Please note:*** DDEV will intercept all outgoing email. In order to verify the functionality of the Dog CEO Mail module, visit https://dogceo.ddev.site:8026/ where an inbox can be checked.
+
 ## Setup instructions
 ### Backend
 **Reference:** https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev
@@ -79,3 +81,10 @@ On ~/projects/dogceo/web/themes/contrib/bootstrap_barrio/scss/components/table.s
 Then run:
 
     cd ~/projects/dogceo/web/themes/custom/dogceo_theme/ && gulp
+
+### Database
+Import the DB with:  
+    ddev import-db --src=dogceo.sql.gz
+
+Export the DB with:
+    ddev export-db
