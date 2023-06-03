@@ -52,3 +52,30 @@ Common functions:
     ddev start
     ddev stop
     ddev xdebug
+
+### Frontend
+**Reference:** 
+1. https://tecadmin.net/how-to-install-nvm-on-ubuntu-22-04/
+2. https://ostraining.com/blog/drupal/how-to-use-bootstrap-5-and-sass-in-drupal-9/
+
+In order to make changes to the custom theme, run the following commands: 
+
+    sudo apt install curl
+    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+    source ~/.profile
+    nvm install node
+    cd ~/projects/dogceo/web/themes/custom/dogceo_theme/
+    npm install --global gulp-cli
+    npm install
+
+Change ~/projects/dogceo/web/themes/custom/dogceo_theme/gulpfile.js, line 79:
+
+        proxy: 'https://dogceo.ddev.site',
+
+On ~/projects/dogceo/web/themes/contrib/bootstrap_barrio/scss/components/table.scss, add:
+
+    $table-border-width: 1px;
+
+Then run:
+
+    cd ~/projects/dogceo/web/themes/custom/dogceo_theme/ && gulp
