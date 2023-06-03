@@ -1,0 +1,22 @@
+uuid: 3a634570-e584-4b0c-a531-c5e391cac6d4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - dogceo_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: dogceo_theme_powered
+theme: dogceo_theme
+region: top_header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

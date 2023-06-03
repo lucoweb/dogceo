@@ -1,0 +1,20 @@
+uuid: d166ecff-1a8e-4ae6-bd94-afde6a086172
+langcode: en
+status: true
+dependencies:
+  module:
+    - dogceo
+  theme:
+    - dogceo_theme
+id: dogbreedblock
+theme: dogceo_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: dog_breed_block
+settings:
+  id: dog_breed_block
+  label: 'Dog Breed Block'
+  label_display: visible
+  provider: dogceo
+visibility: {  }

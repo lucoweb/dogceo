@@ -1,0 +1,22 @@
+uuid: d043f535-e0e9-4115-8ab4-c4bf3efddca4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dogceo_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: dogceo_theme_breadcrumbs
+theme: dogceo_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
