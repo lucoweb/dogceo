@@ -4,29 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.dog_breed.body
+    - field.field.node.dog_breed.feeds_item
     - field.field.node.dog_breed.field_slug
     - node.type.dog_breed
   module:
-    - text
     - user
 id: node.dog_breed.teaser
 targetEntityType: node
 bundle: dog_breed
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  feeds_item: true
   field_slug: true

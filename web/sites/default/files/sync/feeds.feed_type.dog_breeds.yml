@@ -1,0 +1,63 @@
+uuid: 62f4b4ad-8600-4733-95a3-f9bb621ba35f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dog_breed.field_slug
+    - node.type.dog_breed
+  module:
+    - node
+label: 'Dog Breeds'
+id: dog_breeds
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: '|'
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dog_breed
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  slug:
+    value: Slug
+    label: Slug
+    machine_name: slug
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_slug
+    map:
+      value: slug
+    settings:
+      language: null
+    unique: {  }

@@ -3,27 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.dog_breed.body
+    - field.field.node.dog_breed.feeds_item
     - field.field.node.dog_breed.field_slug
     - node.type.dog_breed
   module:
     - path
-    - text
 id: node.dog_breed.default
 targetEntityType: node
 bundle: dog_breed
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -83,4 +72,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

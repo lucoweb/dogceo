@@ -1,0 +1,13 @@
+uuid: 764ca050-df38-4388-b32b-6be5ea21adb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+_core:
+  default_config_hash: Ur7RuR5ew0bsKEMwJUA7ZY0oY1mfXrSzcw4Tlt8FMJ0
+id: feeds_feed_clear_action
+label: 'Delete imported items of selected feeds'
+type: feeds_feed
+plugin: feeds_feed_clear_action
+configuration: {  }
