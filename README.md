@@ -82,6 +82,9 @@ Then run:
 
     cd ~/projects/dogceo/web/themes/custom/dogceo_theme/ && gulp
 
+### Content
+Using Feeds, import the contents of dog_breeds.csv.
+
 ### Database
 Import the DB with:
 
