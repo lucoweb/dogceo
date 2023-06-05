@@ -32,8 +32,7 @@ Open Terminal and issue the following commands in order:
 
 From this point forward, visit the website at: https://dogceo.ddev.site. However it's still a blank slate. Follow through with the commands below:
 
-    ddev composer create "drupal/recommended-project":^9
-    ddev composer require drush/drush drupal/admin_toolbar drupal/devel drupal/bootstrap_barrio
+    ddev composer require drush/drush
     ddev drush si --account-name=admin --account-pass=Admin.358132134!
     chmod 755 web/sites/default && chmod 644 web/sites/default/settings.php
     sudo apt-get install software-properties-common
@@ -47,6 +46,8 @@ From this point forward, visit the website at: https://dogceo.ddev.site. However
 Import the config with:
 
     cd ~/projects/dogceo/web/sites/default/
+    ddev drush cset system.site uuid "55dfef29-4451-42ee-993f-b35c3e4bbba9"
+    ddev drush entity:delete shortcut_set
     ddev drush cim
 
 Common functions: 
