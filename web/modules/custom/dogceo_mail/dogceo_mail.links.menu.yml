@@ -3,3 +3,4 @@ dogceo_mail.config:
   title: Dog CEO Mail Settings
   description: Settings for email redirection.
   route_name: dogceo_mail.config
+  parent: system.admin_config
